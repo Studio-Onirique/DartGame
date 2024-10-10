@@ -8,7 +8,6 @@ using System;
 
 public class dart : MonoBehaviour
 {
-    public HandGrabInteractor _dart;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +17,17 @@ public class dart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(_dart.IsGrabbing);
-        /*print(_dart.Interactors.An);
-        if (_dart.Interactors.Any())
-        {
-            print(_dart.Interactors.First().gameObject.name);
-        }
-        if (_dart.Interactors.FirstOrDefault<HandGrabInteractor>() != null)
-        {
-            print("partyyy!!!");
-        }*/
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.gameObject.name);
+        gameObject.GetComponent<Rigidbody>().freezeRotation = false;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        gameObject.GetComponent<Rigidbody>().freezeRotation = true;
     }
 }
