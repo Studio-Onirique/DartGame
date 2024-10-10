@@ -5,28 +5,37 @@ using Oculus.Interaction;
 using Oculus.Interaction.HandGrab;
 using System.Linq;
 using System;
+using Unity.VisualScripting;
 
 public class dart : MonoBehaviour
 {
-    public HandGrabInteractor _dart;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(_dart.IsGrabbing);
-        /*print(_dart.Interactors.An);
-        if (_dart.Interactors.Any())
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        gameObject.GetComponent<Rigidbody>().freezeRotation = false;
+        
+        if (collision.GetContact(0).thisCollider.gameObject.name == "PikePike")
         {
-            print(_dart.Interactors.First().gameObject.name);
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
-        if (_dart.Interactors.FirstOrDefault<HandGrabInteractor>() != null)
-        {
-            print("partyyy!!!");
-        }*/
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
     }
 }

@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5305327999420693107}
   - component: {fileID: 3481558863074768201}
+  - component: {fileID: 627606236536961996}
   m_Layer: 0
   m_Name: PikePike
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1346134427914319648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1289, y: -0.027, z: 0.042}
+  m_LocalPosition: {x: -0.1387, y: -0.027, z: 0.042}
   m_LocalScale: {x: 0.017191267, y: 0.017191267, z: 0.017191267}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136,6 +137,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &627606236536961996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346134427914319648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6878ac2545e6f4faadedf52d573092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dart: {fileID: 2354554698035869031}
 --- !u!1 &2774900287439524442
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +162,7 @@ GameObject:
   - component: {fileID: 2354554698035869031}
   - component: {fileID: 3026406930337593885}
   - component: {fileID: 4450348628732829101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dart
   m_TagString: Dart
   m_Icon: {fileID: 0}
@@ -182,7 +196,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2774900287439524442}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.01
   m_Drag: 0
   m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -223,7 +237,7 @@ CapsuleCollider:
   m_Radius: 0.04
   m_Height: 0.24
   m_Direction: 0
-  m_Center: {x: 0, y: -0.03, z: 0.04}
+  m_Center: {x: 0, y: -0.025, z: 0.043}
 --- !u!114 &4450348628732829101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfb04fb174abd74ba52cde31db893d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dart: {fileID: 0}
 --- !u!1 &7561646012511551659
 GameObject:
   m_ObjectHideFlags: 0
