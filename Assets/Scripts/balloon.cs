@@ -5,19 +5,21 @@ using Oculus.Interaction;
 
 public class balloon : MonoBehaviour
 {
-    float scoreLocal = GameManager.score;
+    public AudioClip sonPop;
+    public GameManager gameManager;
+    public AudioSource audioSource;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "PikePike")
         {
+            GameManager.score++;
+            // actualise le canvas
+            gameManager.ActualiserScore();
+
+            audioSource.PlayOneShot(sonPop, 1f);
+
             // Désactive le ballon
             gameObject.SetActive(false);
-            // incrémente le score
-            scoreLocal+= 1;
-            GameManager.score = scoreLocal;
-            print(GameManager.score);
-            // actualise le canvas
-            GameManager.ActualiserScore();
         }
     }
     void Update()

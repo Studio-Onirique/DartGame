@@ -19,10 +19,11 @@ public class GameManager : MonoBehaviour
 
     //SONS
     public AudioSource sourceAudio; // pour les sfx
+    public AudioClip sonReset;
 
     //SCORE
     public static float score = 0;
-    public TextMeshProUGUI texte; // le canvas avec le score
+    public TextMeshProUGUI texteScore; // le canvas avec le score
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // Replace les darts et les ballons lorsque le joueur appuie sur le bouton RESET
@@ -66,8 +67,9 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < darts.Length; i++) {
             //SONS
             sourceAudio.time = 0.6f;
-            sourceAudio.enabled = true;
-            Invoke("DesactiverSourceAudio", 0.8f);
+            sourceAudio.PlayOneShot(sonReset);
+            /*sourceAudio.enabled = true;
+            Invoke("DesactiverSourceAudio", 0.8f);*/
             //DARTS
             darts[i].transform.position = positionInitialeDarts[i];
             darts[i].transform.rotation = rotationInitialeDarts;
@@ -80,11 +82,11 @@ public class GameManager : MonoBehaviour
             ballons[i].SetActive(true);
         }
     }
-    void DesactiverSourceAudio() {
+    /*void DesactiverSourceAudio() {
         sourceAudio.enabled = false;
-    }
-    public static void ActualiserScore() {
+    }*/
+    public void ActualiserScore() {
         //texte.text = "Test";
-        print("allo!!!");
+        texteScore.text = "Score: " + score.ToString();
     }
 }

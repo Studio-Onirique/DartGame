@@ -6569,7 +6569,8 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   sourceAudio: {fileID: 573449727}
-  texte: {fileID: 922237570}
+  sonReset: {fileID: 8300000, guid: 15c0c1ec5c9aa524bb2a8a984a5b9b93, type: 3}
+  texteScore: {fileID: 922237570}
 --- !u!4 &573449726
 Transform:
   m_ObjectHideFlags: 0
@@ -6592,11 +6593,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573449724}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 15c0c1ec5c9aa524bb2a8a984a5b9b93, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -15118,6 +15119,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: sonPop
+      value: 
+      objectReference: {fileID: 8300000, guid: 54f93e1e1c39a854189b81cf2284c8c9, type: 3}
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 573449727}
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 573449725}
     - target: {fileID: 7110036157074858016, guid: 5447770b79d012c40a6c072ea46150e1,
         type: 3}
       propertyPath: m_Name
@@ -16947,6 +16963,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: sonPop
+      value: 
+      objectReference: {fileID: 8300000, guid: 54f93e1e1c39a854189b81cf2284c8c9, type: 3}
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 573449727}
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 573449725}
     - target: {fileID: 7110036157074858016, guid: 5447770b79d012c40a6c072ea46150e1,
         type: 3}
       propertyPath: m_Name
@@ -21182,6 +21213,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: sonPop
+      value: 
+      objectReference: {fileID: 8300000, guid: 54f93e1e1c39a854189b81cf2284c8c9, type: 3}
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 573449727}
+    - target: {fileID: 2597762283317413308, guid: 5447770b79d012c40a6c072ea46150e1,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 573449725}
     - target: {fileID: 7110036157074858016, guid: 5447770b79d012c40a6c072ea46150e1,
         type: 3}
       propertyPath: m_Name
