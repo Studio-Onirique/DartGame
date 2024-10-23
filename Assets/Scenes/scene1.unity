@@ -6569,7 +6569,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   sourceAudio: {fileID: 573449727}
-  sonReset: {fileID: 8300000, guid: 15c0c1ec5c9aa524bb2a8a984a5b9b93, type: 3}
+  sonReset: {fileID: 8300000, guid: a7895ae15108c4d4eb9cab1201ddd70e, type: 3}
   texteScore: {fileID: 922237570}
 --- !u!4 &573449726
 Transform:
